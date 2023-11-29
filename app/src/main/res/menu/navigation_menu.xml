@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+    </group>
+    <item android:id="@+id/delete_all_note"
+        android:title="Delete all notes"
+        android:icon="@drawable/trash_solid" />
+
+    <item android:id="@+id/app_info"
+        android:title="About the application"
+        android:icon="@drawable/info_solid" />
+
+    <item android:id="@+id/add_note"
+        android:title="Add note"
+        android:icon="@drawable/plus_solid"/>
+
+    <item android:id="@+id/join_our_telegram"
+        android:title="Join our telegram"
+        android:icon="@drawable/paper_plane_solid"/>
+
+    <item android:id="@+id/contact_us"
+        android:title="Contact us"
+        android:icon="@drawable/phone_solid"/>
+</menu>

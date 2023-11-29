@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.NotesFragment"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/toolbar_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:background="@color/toolbar_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/baseline_menu_24"
+            app:tint="@color/text_color"
+            android:padding="2dp"/>
+
+        <TextView
+            android:id="@+id/toolbar_center_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/baseline_search_24"
+            app:tint="@color/text_color"
+            android:padding="2dp"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/edit_text_background"
+        android:layout_margin="8dp"
+        android:id="@+id/search_layout">
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:background="@color/edit_text_background">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_search_24"
+                android:layout_gravity="end"
+                app:tint="@color/text_color"
+                android:padding="4dp"/>
+
+            <EditText
+                android:id="@+id/txt_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Title search"
+                android:maxLength="20"
+                android:paddingVertical="4dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/top_layout" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/cancel"
+                android:padding="4dp"
+                android:tint="@color/text_color"
+                android:id="@+id/cancel_search"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/search_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/rv_note_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/note_group_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="2dp"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/edit_text_background">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_add_24"
+            android:padding="8dp"
+            app:tint="@color/text_color"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

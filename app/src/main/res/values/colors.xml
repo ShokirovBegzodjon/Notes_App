@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#3D3D3D</color>
+    <color name="toolbar_color">#171717</color>
+    <color name="text_color">#FFFFFFFF</color>
+    <color name="white">#D5D5D5</color>
+    <color name="user_icon_1">#ffe46962</color><!-- red -->
+    <color name="user_icon_2">#ffaf5cf7</color><!-- purple -->
+    <color name="user_icon_3">#ff4c8df6</color><!-- blue -->
+    <color name="user_icon_4">#fff439a0</color><!-- pink -->
+    <color name="user_icon_5">#ff1ea446</color><!-- green -->
+    <color name="user_icon_6">#ff129eaf</color><!-- cyan -->
+    <color name="user_icon_7">#ffb26c00</color><!-- yellow -->
+    <color name="user_icon_8">#ffe8710a</color>
+    <color name="edit_text_background">#2F2F2F</color>
+    <color name="button_backgrount">#A93605</color>
+    <color name="black">#000000</color><!-- orange -->
+
+</resources>
